@@ -1,0 +1,195 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+}
+
+header {
+    height: 600px;
+}
+
+#MainNavBar {
+    position: static;
+    z-index: 4;
+}
+
+.liftPositionInNav {
+    color: #000000;
+}
+
+    .liftPositionInNav:hover {
+        opacity: 0.5;
+    }
+
+.Font-Logo {
+    font-family: sans-serif;
+    padding-top: .3125rem;
+    padding-bottom: .3125rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    font-size: x-large;
+}
+
+.MiniScrean {
+    display: none;
+}
+
+.DropDownList ul > li > a {
+    color: #000000;
+    font-size: 14px;
+    padding: 0px 0 10px;
+    margin-bottom: 0px;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: normal;
+    text-align: left;
+    letter-spacing: 0;
+}
+
+nav > div > ul > li > a {
+    color: #000000;
+    font-family: sans-serif;
+}
+
+    nav > div > ul > li > a:hover {
+        color: #888888;
+    }
+
+.Sculpture:hover > div {
+    display: block;
+}
+
+.DropDownList ul > li > a:hover {
+    color: #888888;
+    text-decoration: none;
+}
+
+.DropDownList ul > li > ul > li > a {
+    font-weight: 400;
+    color: #888888;
+    text-transform: capitalize;
+    padding: 3px 0;
+    font-size: 13px;
+    margin-bottom: 0;
+    letter-spacing: 0;
+}
+
+    .DropDownList ul > li > ul > li > a:hover {
+        color: #000000;
+        text-decoration: none;
+    }
+
+#closeIconeSearch {
+    display: none;
+}
+/************************************************************/
+#rightPositionInNav
+{
+    margin-right:8%;
+}
+#rightPositionInNav > ul > li > a {
+    color: #000000;
+}
+
+    #rightPositionInNav > ul > li > a:hover {
+        opacity: 0.5;
+    }
+
+#back {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 600px;
+}
+
+#leftDriction {
+    width: 60px;
+    height: 60px;
+    background-color: black;
+    padding-left: 20px;
+    padding-top: 18px;
+    color: white;
+    position: absolute;
+    left: 0px;
+    top: 200px;
+}
+
+.pointer > a {
+    text-decoration: none;
+}
+
+.pointer :hover {
+    cursor: pointer;
+}
+
+#rightDriction {
+    width: 60px;
+    height: 60px;
+    background-color: black;
+    padding-left: 25px;
+    top: 200px;
+    padding-top: 18px;
+    color: white;
+    position: absolute;
+    right: 0px;
+}
+
+#menucollection {
+    display: none;
+}
+
+    #menucollection:hover {
+        cursor: pointer;
+    }
+    /************************************************************************************/
+.ProductHighQuality
+{
+    width:95%;
+}
+.AllProduct
+{
+    width:95%;
+}
+.Add_To_Cart {
+    cursor: pointer;
+    text-decoration: none;
+}
+.Add_To_Cart:hover
+{
+    color:blue;
+    
+}
+
+@media only screen and ( max-width: 795px) {
+    #menucollection {
+        display: inline-block;
+    }
+
+    .liftPositionInNav {
+        display: none;
+    }
+
+    #liftPositionInNavhidden {
+        display: none;
+    }
+
+    #leftDriction {
+        display: none;
+    }
+
+    #rightDriction {
+        display: none;
+    }
+
+    .MiniScrean {
+        display: block;
+    }
+
+    #navListHidden {
+        display: none;
+    }
+}

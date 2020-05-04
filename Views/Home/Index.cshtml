@@ -1,0 +1,64 @@
+﻿@model IEnumerable<Art_ShopVF.Models.Product>
+@{
+    ViewData["Title"] = "Home Page";
+}
+@{
+    var HighRateProduct = ViewData["HighProduct"] as List<Product>;
+    var RoleName = (string)ViewData["UserRole"];
+}
+@if (RoleName == "Seller")
+{
+    <a class=" text-primary btn-link" asp-area="" asp-controller="Products" asp-action="Index" title="Manage">Product</a>
+
+}
+@if (RoleName == "Admin")
+{
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Administration" asp-action="CreateRole">createRole</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Administration" asp-action="ListRoles">List Roles</a>
+        </li>
+    </ul>
+
+        }
+        <div class="row text-center mt-4">
+            <div class="text-center mt-4 col-12">
+                <h4>high product</h4>
+            </div>
+        </div>
+        <div class="row  mt-3 mb-5">
+            @foreach (var item in HighRateProduct)
+            {
+                <div class="col-md-4 p-3 mb-3">
+                    <img class="AllProduct pl-4 mt-3" src="~/Images/@item.Image" width="80%">
+                    <label class="alert-light pl-4 mt-3"> Price : </label>@item.Brand
+                    <br />
+                    <label class="alert-light pl-4 mt-3"> Price : </label>@item.Price
+                    <br />
+                    <a asp-action="Details" asp-controller="Products" asp-route-id="@item.Id" class="pl-4 mt-3">Details</a>
+
+
+                </div>
+            }
+        </div>
+        <div class="row text-center mt-4 mb-4">
+            <div class="text-center mt-4 col-12">
+                <h4>All product</h4>
+            </div>
+        </div>
+        <div class="row  mt-3 mb-5">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-2 p-3 mb-3">
+                    <img class="AllProduct pl-4 mt-3" src="~/Images/@item.Image" width="80%">
+                    <label class="alert-light pl-4 mt-3"> Brand : </label>@item.Brand
+                    <br />
+                    <label class="alert-light pl-4 mt-3"> Price : </label>@item.Price
+                    <br />
+                    <a class=" text-primary btn-link pl-4 mt-3 " asp-area="" asp-controller="Products" asp-action="Details" asp-route-id="@item.Id">Details</a>
+
+                </div>
+            }
+        </div>
